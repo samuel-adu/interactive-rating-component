@@ -150,10 +150,10 @@ p {
 
   p {
     font-size: 15px;
-    margin-bottom: 1.5;
+    margin-bottom: 1.5rem;
   }
 
   .ratings {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
