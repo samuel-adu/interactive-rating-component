@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -13,58 +15,61 @@
 }
 
 body {
-  font-family: "Overpass", sans-serif;
-  font-size: 15px;
   margin: 0;
+  font-family: 'Overpass', sans-serif;
   background-color: var(--very-dark-blue);
+  font-size: 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-}
-
-main {
-  background-color: var(--dark-blue);
-  border-radius: 15px;
-  width: 90%;
-  margin: 0 auto;
-  max-width: 400px;
+  min-height: 100svh;
 }
 
 .container {
-  padding: 2em;
+  padding-inline: 1.5rem;
 }
 
 h1,
 h2 {
   color: var(--white);
+  margin-bottom: 1rem;
 }
 
 p {
-  color: var(--light-grey);
+  font-size: 14px;
   line-height: 1.5;
+  color: var(--light-grey);
+  margin-bottom: 1rem;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.card {
+  background-color: var(--dark-blue);
+  padding: 1.5rem;
+  border-radius: 16px;
 }
 
 .star-img {
   background-color: var(--desaturated-dark-blue);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.star-img img {
+  max-width: 100%;
 }
 
 .ratings {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1em;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .btn {
@@ -76,7 +81,7 @@ ul {
 
 .submit-btn {
   background-color: var(--orange);
-  padding: 1em 3em;
+  padding: 1rem 3rem;
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -90,11 +95,10 @@ ul {
 
 .rating-btn {
   border-radius: 50%;
-  padding: 1em;
   background-color: var(--desaturated-dark-blue);
   color: var(--light-grey);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   text-align: center;
   cursor: pointer;
 }
@@ -116,12 +120,34 @@ ul {
 .selection {
   background-color: var(--very-dark-blue);
   border-radius: 20px;
-  padding: 0.5em 1em;
-  margin-block: 1em;
+  padding: 0.5rem 1rem;
+  margin-block: 1rem;
   display: inline-block;
 }
 
 .selection p {
   color: var(--orange);
   margin: 0;
+}
+
+@media (min-width: 640px) {
+  .card {
+    width: 420px;
+    padding: 2rem;
+    border-radius: 16px;
+  }
+
+  .star-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .rating-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  p {
+    font-size: 15px;
+  }
 }
